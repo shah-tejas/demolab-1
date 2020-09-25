@@ -1,0 +1,16 @@
+name: Pull Request check for master
+on:
+    pull_request:
+    branches:
+      - master
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print a greeting
+              env:
+                MY_VAR: My name is
+                FIRST_NAME: Tejas
+                LAST_NAME: SHAH
+              run: |
+                echo $MY_VAR $FIRST_NAME $LAST_NAME
